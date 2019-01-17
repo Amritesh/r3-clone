@@ -3,15 +3,17 @@ import * as THREE from "three";
 import React from "react";
 import React3 from "react-three-renderer";
 import ObjectModel from 'react-three-renderer-objects';
-import exampleModel from "../../assets/TechnicLEGO_CAR_1.obj";
-import exampleTexture from "../../assets/TechnicLEGO_CAR_1.mtl";
+// import exampleModel from "../../assets/TechnicLEGO_CAR_1.obj";
+// import exampleTexture from "../../assets/TechnicLEGO_CAR_1.mtl";
+import SofaModel from "../../assets/Sofa/Sofa.obj";
+import SofaMaterial from "../../assets/Sofa/Sofa.mtl";
 
 class DemoScene extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      cameraPosition: new THREE.Vector3(0, 300, 750),
+      cameraPosition: new THREE.Vector3(0, 3, 7),
       groupRotation: new THREE.Euler(0, 0, 0),
       scene: {}
     };
@@ -181,8 +183,8 @@ class DemoScene extends React.Component {
           <group name="exampleGroup" rotation={this.state.groupRotation}>
             <ObjectModel
               name="exampleObject"
-              model={exampleModel}
-              material={exampleTexture}
+              model={SofaModel}
+              material={SofaMaterial}
               scene={this.state.scene}
               group="exampleGroup"
             />
